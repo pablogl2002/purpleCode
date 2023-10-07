@@ -26,4 +26,4 @@ async def bot_query(request: Request, query: str = Form(...)) -> JSONResponse:
     except:
         msg = "Unable to get a response from the bot."
         raise HTTPException(status_code=402, detail=msg)
-
+    
