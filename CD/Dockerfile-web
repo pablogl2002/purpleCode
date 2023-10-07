@@ -2,7 +2,7 @@
 FROM httpd:2.4
 
 # Copia tu código web al directorio de documentos de Apache
-COPY ./tu_codigo_web/ /usr/local/apache2/htdocs/
+COPY ./bookspace/ /usr/local/apache2/htdocs/
 
 # Copia los certificados SSL/TLS al contenedor
 COPY /etc/ssl/server.crt /etc/ssl/certs/
