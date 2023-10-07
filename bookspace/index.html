@@ -36,9 +36,6 @@
             INDEX++;
             var str="";
             str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
-            str += "          <span class=\"msg-avatar\">";
-            str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
-            str += "          <\/span>";
             str += "          <div class=\"cm-msg-text\">";
             str += msg;
             str += "          <\/div>";
@@ -70,9 +67,6 @@
             }).join('');
             var str="";
             str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
-            str += "          <span class=\"msg-avatar\">";
-            str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
-            str += "          <\/span>";
             str += "          <div class=\"cm-msg-text\">";
             str += msg;
             str += "          <\/div>";
@@ -181,7 +175,7 @@
         
         }
         #chat-circle {
-        bottom: 50px;
+        bottom: 10px;
         right: 50px;
         background: #222ce3;
         width: 80px;
@@ -246,7 +240,6 @@
         }
         .chat-box-body:after {
         content: "";
-        background-image: url('./images/');
         opacity: 0.1;
         top: 0;
         left: 0;
@@ -257,26 +250,23 @@
         z-index: -1;   
         }
         #chat-input {
-        background: #f4f7f9;
-        width:100%; 
-        position:relative;
-        height:47px;  
-        padding-top:10px;
-        padding-right:50px;
-        padding-bottom:10px;
-        padding-left:15px;
-        border:none;
-        resize:none;
-        outline:none;
-        border:1px solid #ccc;
-        color:#888;
-        border-top:none;
-        border-bottom-right-radius:5px;
-        border-bottom-left-radius:5px;
-        overflow:hidden;  
-        }
-        .chat-input > form {
-            margin-bottom: 0;
+            background: #f4f7f9;
+            width:100%; 
+            position:relative;
+            height:47px;  
+            padding-top:10px;
+            padding-right:50px;
+            padding-bottom:10px;
+            padding-left:15px;
+            border:none;
+            resize:none;
+            outline:none;
+            border:1px solid #ccc;
+            color:#888;
+            border-top:none;
+            border-bottom-right-radius:5px;
+            border-bottom-left-radius:5px;
+            overflow:hidden;  
         }
         #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: #ccc;
@@ -291,16 +281,14 @@
         color: #ccc;
         }
         .chat-submit {  
-        position:absolute;
-        bottom:3px;
-        right:10px;
-        background: transparent;
-        box-shadow:none;
-        border:none;
-        border-radius:50%;
-        color:#5A5EB9;
-        width:35px;
-        height:35px;  
+            position:absolute;
+            bottom:10px;
+            right:10px;
+            background: transparent;
+            box-shadow:none;
+            border:none;
+            border-radius:50%;
+            
         }
         .chat-logs {
         padding:15px; 
@@ -427,20 +415,19 @@
             <div class="card">
                 <div class="card-body">
                     <div id="center-text">
-                        <h2>ChatBox UI</h2>
-                        <p>Message send and scroll to bottom enabled </p>
-                      </div> 
+                        <h2>CRecomendator</h2>
+                    </div> 
                     <div id="body"> 
                       
-                    <div id="chat-circle" class="btn btn-raised">
+                    <div id="chat-circle" class="btn btn-primary">
                             <div id="chat-overlay"></div>
-                                <i class="material-icons">speaker_phone</i>
-                        </div>
+                                <i class="material-icons">Chat</i>
+                            </div>
                       
                       <div class="chat-box">
                         <div class="chat-box-header">
-                          ChatBot
-                          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+                          Recomendator
+                          <span class="chat-box-toggle"><i class="material-icons"><img style="width: 30px; height: 30px; " src="./images/cerrar.png"/></i></span>
                         </div>
                         <div class="chat-box-body">
                           <div class="chat-box-overlay">   
@@ -451,8 +438,12 @@
                         </div>
                         <div class="chat-input">      
                           <form>
-                            <input type="text" id="chat-input" placeholder="Send a message..."/>
-                          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+                            <div>
+                                <input type="text" id="chat-input" placeholder="Send a message..."/>
+                                <button type="submit" class="chat-submit" id="chat-submit">
+                                    <i class="material-icons"><img style="width: 30px; height: 30px; " src="./images/enviar-mensaje.png"/></i>
+                                </button>
+                            </div>
                           </form>      
                         </div>
                       </div>
