@@ -62,7 +62,7 @@ based on what "
             dict: {'response': 'text of the response'}
         """
         context = self._context if self.msg_count == 0 else ""
-        final_query = context + query + ". Give me no more than 8 sentences as a reply."
+        final_query = context + query + ". And give me the response in only one sentence, please."
         query_result = self.chatbot.query(final_query)
         self._msg_count += 1
         return {'response': query_result.text}
