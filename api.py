@@ -5,7 +5,17 @@ from spacebot.spacebot import SpaceBot
 
 
 app = FastAPI()
-api_bot = SpaceBot()
+api_bot = None
+
+@app.post("/init_bot")
+async def init_bot(request: Request):
+    global api_bot
+    try:
+        api_bot = SpaceBot()
+    except:
+        msg = "Unable to initialize the bot."
+        raise HTTPException(status_code=402, detail=msg)
+     
 
 @app.post("/bot_query")
 async def bot_query(request: Request, query: str = Form(...)) -> JSONResponse:
@@ -15,4 +25,5 @@ async def bot_query(request: Request, query: str = Form(...)) -> JSONResponse:
         return JSONResponse(content=json_compatible_item_data)
     except:
         msg = "Unable to get a response from the bot."
-        raise HTTPException(status_code=420, detail=msg)
+        raise HTTPException(status_code=402, detail=msg)
+
