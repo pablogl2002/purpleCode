@@ -11,7 +11,10 @@ api_bot = None
 async def init_bot(request: Request):
     global api_bot
     try:
-        api_bot = SpaceBot()
+        if api_bot is None:
+            api_bot = SpaceBot()
+        else:
+            api_bot.new_conversation()
     except:
         msg = "Unable to initialize the bot."
         raise HTTPException(status_code=402, detail=msg)

@@ -2,10 +2,9 @@ import os
 from hugchat import hugchat
 from hugchat.login import Login
 
-# ENV_BOT_EMAIL = 'adri_mrtnz@hotmail.com'
-# ENV_BOT_PASSWD = 'BotSpaceApps2023'
 # email = os.getenv("ENV_BOT_EMAIL")
 # passwd = os.getenv("ENV_BOT_PASSWD")
+# cookies_path_dir = os.getenv("ENV_BOT_COOKIES")
 email = 'adri_mrtnz@hotmail.com'
 passwd = 'BotSpaceApps2023'
 cookies_path_dir = './cookies/'
@@ -18,9 +17,9 @@ class SpaceBot:
         self._msg_count = 0
         self.initialize_bot_api()
         self.new_conversation()
-        self._context = context = "Imagine that you are an agent in a \
-            space travel agency that organizes travels to the planets \
-            of the Solar System and "
+        self._context = "Imagine that you are a travel agent of an agency that organizes trips \
+through the real planets and moons of the Solar System. You have to recomend me one destination \
+based on what "
         
     @property
     def name(self):
@@ -36,16 +35,14 @@ class SpaceBot:
 
     def initialize_bot_api(self):
         """Makes the connection with the HuggingFace API"""
-        try: 
-            # Load cookies when restarting the program
-            sign = Login(email, None)
-            cookies = sign.loadCookiesFromDir(cookies_path_dir)
-        except:
-            sign = Login(email, passwd)
-            cookies = sign.login()
-            sign.saveCookiesToDir(cookies_path_dir)
-        finally:
-            self.chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
+        # sign = Login(email, passwd)
+        # cookies = sign.login()
+        # sign.saveCookiesToDir(cookies_path_dir)
+        # self.chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
+        sign = Login(email, passwd)
+        cookies = sign.login()
+        sign.saveCookiesToDir(cookies_path_dir)
+        self.chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
 
     def new_conversation(self):
         """
@@ -54,6 +51,7 @@ class SpaceBot:
         """
         id = self.chatbot.new_conversation()
         self.chatbot.change_conversation(id)
+        self._msg_count = 0
 
     def query(self, query):
         """Makes a query to the Bot
@@ -63,11 +61,9 @@ class SpaceBot:
         Returns:
             dict: {'response': 'text of the response'}
         """
-        query = "I want a planet where i can fully express myself"
-
-        context = self._context if self.msg_count != 0 else ""
-        final_query = context + query + "Give me no more than one paragraph."
-
+        context = self._context if self.msg_count == 0 else ""
+        final_query = context + query + ". Give me no more than 8 sentences as a reply."
         query_result = self.chatbot.query(final_query)
+        self._msg_count += 1
         return {'response': query_result.text}
     
