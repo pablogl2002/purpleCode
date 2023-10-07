@@ -1,0 +1,6 @@
+body{
+    background-image: url(./images/ssolar.jpg);
+    background-size: cover; /* o 'contain' según tu preferencia */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

@@ -12,6 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
+
+        // Definimos una función que se ejecutará cuando se haga clic en el botón
+    function miClic() {
+            window.location.href = "catalog.html";
+        }
 $(function() {
     var INDEX = 0; 
     $("#chat-submit").click(async function(e) {
@@ -101,6 +106,8 @@ function generate_message(msg, type) {
     $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
 } 
 
+
+
     
     $(document).delegate(".chat-btn", "click", function() {
         var value = $(this).attr("chat-value");
@@ -135,6 +142,7 @@ function generate_message(msg, type) {
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
     })
+
     
 })
 
@@ -145,7 +153,7 @@ function generate_message(msg, type) {
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div>
-                    <h4 class="titulo">BookSpace</h4>
+                    <h7 class="titulo">BookSpace</h7>
                 </div>
             </div>
         </div>
@@ -163,7 +171,8 @@ function generate_message(msg, type) {
                         <img src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
-                        <p>AAAAA</p>
+                        <h2 id="planeta1">Mercurio</h2>
+                        <p>Lorem ipsum</p>
                     </div>
                 </div>
               </div>
@@ -173,7 +182,8 @@ function generate_message(msg, type) {
                         <img src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
-                        <p>BBBBBB</p>
+                        <h2 id="planeta2">Venus</h2>
+                        <p>Lorem ipsum</p>
                     </div>
                 </div>
               </div>
@@ -183,10 +193,15 @@ function generate_message(msg, type) {
                         <img src="./images/starfall-gif-46.gif" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
-                        <p>CCCCC</p>
+                        <h2 id="planeta3">Tierra</h2>
+                        <p>Lorem ipsum</p>
                     </div>
                 </div>
+                
               </div>
+              <div class="d-flex justify-content-center">
+                <button  class="btn btn-primary  gap-2 col-6 mx-auto" style="margin-top: 50px;" onclick="miClic()">Cat&aacute;logo</button>
+            </div>
             </div>
           </div>
         
@@ -194,7 +209,7 @@ function generate_message(msg, type) {
             <div class="card" style="height: 578px; width: 400px; margin-bottom: 10px;">
                 <div class="card-body">
                     <div id="center-text">
-                        <h2>Recomendator</h2>
+                        <h2>SpaceBoot</h2>
                         <div class="chat-box">
                             <div class="chat-box-header">
                               Recomendator
@@ -217,12 +232,12 @@ function generate_message(msg, type) {
                                 </div>
                               </form>      
                             </div>
-                          </div>
+                        </div>
                           <!--imagen recomendador -->
-                          <div id="chat-circle" class="btn btn-primary">
+                        <div id="chat-circle" class="btn btn-primary">
                             <div id="chat-overlay"></div>
                                 <i class="material-icons">Chat</i>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

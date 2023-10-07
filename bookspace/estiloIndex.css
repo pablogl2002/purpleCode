@@ -225,3 +225,8 @@
         justify-content: left;
         align-items: center;
     }
+
+    .cat-logo{
+        justify-content: center;
+        align-items: center;
+    }
