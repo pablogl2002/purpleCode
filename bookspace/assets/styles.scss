@@ -3,6 +3,7 @@
 }
 
 .cards-list {
+  padding-top: 10%;
     z-index: 0;
     width: 100%;
     display: flex;
@@ -11,6 +12,7 @@
   }
   
   .card {
+    padding-top: 10%;
     margin: 30px auto;
     width: 500px;
     height: 300px;
@@ -141,8 +143,12 @@ h1,h4{
   
   .item-in {
     background: #fff;
-    padding: 10px 35px 35px 35px;
+    padding: 40px;
     position: relative;
+    
+    &:hover:before {
+      width: 100%;
+    }
    
     &::before {
     content: "";
