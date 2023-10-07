@@ -9,13 +9,14 @@
     <script>
         $(function() {
         var INDEX = 0; 
-        $("#chat-submit").click(function(e) {
+        $("#chat-submit").click(async function(e) {
             e.preventDefault();
             var msg = $("#chat-input").val(); 
 
             if(msg.trim() == ''){
                 return false;
             }
+            
             generate_message(msg, 'self');
             var buttons = [
                 {
@@ -28,10 +29,22 @@
                 }
             ];
 
-            setTimeout(function() {      
-                generate_message(msg, 'user');  
-            }, 1000)
-            
+            $.ajax({
+                url: "http://127.0.0.1:8080/bot_query",
+                method: "POST",
+                contentType: "application/x-www-form-urlencoded", 
+                data: {"query": msg},
+                success: function(reply) {
+                    if(reply){
+                    	//generate message con la respuesta respuesta (msg,self) 
+                        var init = reply.response 
+                        var s = 'bot'
+                        generate_message(init,s)
+                    } else {
+
+                    }
+                }
+            }); 
         })
         
         function generate_message(msg, type) {
@@ -98,10 +111,10 @@
                 url: "http://127.0.0.1:8080/init_bot",
                 method: "POST",
                 success: function(reply) {
-                    if(reply == "true"){
+                    if(reply){
                     	//generate message con la respuesta respuesta (msg,self) 
-                        var init = reply.response   
-                        var s = 'self'
+                        var init = reply.response 
+                        var s = 'bot'
                         generate_message(init,s)
                     } else {
 
@@ -119,9 +132,6 @@
         })
         
         })
-
-
-
 
         function obtenerValor(form) {
         	var idForm = form;

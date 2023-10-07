@@ -1,11 +1,20 @@
 from fastapi import FastAPI, Form, Request, HTTPException
 from fastapi.encoders import jsonable_encoder
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import JSONResponse
 from spacebot.spacebot import SpaceBot
 
 
 app = FastAPI()
 api_bot = None
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/init_bot")
 async def init_bot(request: Request) -> JSONResponse:
