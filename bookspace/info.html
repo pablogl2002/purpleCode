@@ -7,64 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles.css">
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
-        function obtenerValor(form) {
-        	var idForm = form;
-            var idrol = "rolForm" + idForm;
-            var rol = document.getElementById(idrol).value;
-            var idusu = "username" + idForm;
-            var usuario = document.getElementById(idusu).value;
-            
-            
-            $.ajax({
-                url: "/nol2223/comprobar",
-                method: "GET",
-                data:{"rol": rol, "login": usuario},
-                success: function(response) {
-                    if(response == "true"){
-                    	document.getElementById(idForm).submit();                  	
-                    } else {
-                    	  var rolaterta = "";
-                    	
-                    	  var div = document.createElement("div");
-                    	  div.setAttribute("id", "warning");
-                    	  div.setAttribute("class", "container");
-                    	  // Crear el elemento div alert
-                    	  var divAlert = document.createElement("div");
-                    	  divAlert.setAttribute("class", "alert alert-warning");
-                    	  divAlert.setAttribute("role", "alert");
-                    	  
-                    	  switch (rol) {
-                    	    case "rolalu":
-                    	      rolalerta = "Este usuario no pertenece al grupo Alumnos";
-                    	      break;
-                    	    case "rolpro":
-                    	      rolalerta = "Este usuario no pertenece al grupo Profesores";
-                    	      break;
-                    	    default:
-                    	      rolalerta = "Este usuario no existe";
-                    	    }
-                    	  
-                    	  divAlert.innerHTML = rolalerta;
-
-                    	  // Agregar el div row al div container
-                    	  div.appendChild(divAlert);
-
-                    	  // Agregar el div container al cuerpo del documento
-                    	  document.body.appendChild(div);
-                    	  
-                    	  document.getElementById("username1").value = "";
-                    	  document.getElementById("password1").value = "";
-                    	  
-                    	  document.getElementById("username2").value = "";
-                    	  document.getElementById("password2").value = "";
-                    	  
-                    	  setTimeout(function() {
-                    		  div.remove();
-                    		}, 2000);
-                    }
-                }
-            });
-        }
+        var planet
     </script>
 </head>
 <style>
@@ -109,7 +52,7 @@
         }
 
 		
-    </style>
+</style>
 <body>
     <div class="table-responsive">
         <table>

@@ -40,8 +40,8 @@
                 success: function(reply) {
                     if(reply){
                         //generate message con la respuesta respuesta (msg,self) 
-                        var intro = reply.response 
-                        var cuerpo = reply.frase
+                        var intro = reply.offer_title 
+                        var cuerpo = reply.offer_description
                     
                         var n = "planeta" + i
                         var x = "text" + i
@@ -49,8 +49,8 @@
                         document.getElementById(n).innerHTML = intro
                         document.getElementById(x).innerHTML = cuerpo
                     } 
-            }
-        }); 
+                }
+                }); 
             }
         }
         document.addEventListener("DOMContentLoaded", miFuncion);
