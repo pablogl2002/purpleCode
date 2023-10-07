@@ -38,7 +38,7 @@ async def get_planet(request: Request, planet: str = Form(...)) -> JSONResponse:
 
 
 @app.post("/get_moon")
-async def get_planet(request: Request, moon: str = Form(...)) -> JSONResponse:
+async def get_moon(request: Request, moon: str = Form(...)) -> JSONResponse:
     result = searcher.get_moon(moon)
     json_compatible = jsonable_encoder(result)
     return JSONResponse(content=json_compatible)
