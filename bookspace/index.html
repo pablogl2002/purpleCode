@@ -14,9 +14,47 @@
     <script>
 
         // Definimos una función que se ejecutará cuando se haga clic en el botón
-    function miClic() {
+        function miClic() {
             window.location.href = "catalog.html";
         }
+
+        function miFuncion() {
+            var planetas = [Mercury, Venus, Mars, Saturn, Jupiter, Neptune, Uranus, Pluto]
+            var ofertas = [p1,p2,p3]
+            var numeroRandom = Math.floor(Math.random() * 6); 
+            ofertas[0] = planetas[numeroRandom]
+
+            var numeroRandom = Math.floor(Math.random() * 5);
+            ofertas[1] = planetas[numeroRandom]
+
+            var numeroRandom = Math.floor(Math.random() * 4);
+            ofertas[2] = planetas[numeroRandom]
+
+
+            for (var i = 1; i <= ofertas.length; i++) {
+                $.ajax({
+                url: "http://127.0.0.1:8080/get_planeta",
+                method: "POST",
+                contentType: "application/x-www-form-urlencoded", 
+                data: {"planet": ofertas[i]},
+                success: function(reply) {
+                    if(reply){
+                        //generate message con la respuesta respuesta (msg,self) 
+                        var intro = reply.response 
+                        var cuerpo = reply.frase
+                    
+                        var n = "planeta" + i
+                        var x = "text" + i
+
+                        document.getElementById(n).innerHTML = intro
+                        document.getElementById(x).innerHTML = cuerpo
+                    } 
+            }
+        }); 
+            }
+        }
+        document.addEventListener("DOMContentLoaded", miFuncion);
+
     $(function() {
     var INDEX = 0; 
     $("#chat-submit").click(async function(e) {
@@ -172,7 +210,7 @@ function generate_message(msg, type) {
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
                         <h2 id="planeta1">Mercurio</h2>
-                        <p>Lorem ipsum</p>
+                        <p id="text1">Lorem ipsum</p>
                     </div>
                 </div>
               </div>
@@ -183,7 +221,7 @@ function generate_message(msg, type) {
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
                         <h2 id="planeta2">Venus</h2>
-                        <p>Lorem ipsum</p>
+                        <p id="text2">Lorem ipsum</p>
                     </div>
                 </div>
               </div>
@@ -194,7 +232,7 @@ function generate_message(msg, type) {
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
                         <h2 id="planeta3">Tierra</h2>
-                        <p>Lorem ipsum</p>
+                        <p id="text3">Lorem ipsum</p>
                     </div>
                 </div>
                 
