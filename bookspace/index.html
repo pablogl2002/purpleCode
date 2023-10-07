@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Centro educativo - Login</title>
+    <title>BookSpace</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
         function obtenerValor(form) {
@@ -68,25 +69,61 @@
 </head>
 <style>
         body {
-            background-color: #9EDBEA;
+            background-color: #ffffff;
         }
-        #warning {
-		  margin-top: 20px;
-		}
-		.navbar-brand {font-size: 30px;}
-		nav {
+        
+		.titulo {
 			font-size: 30px;
+            color: white;
   			display: flex;
 		  	justify-content: center; 
 		}
 		#container{
-		  margin-top: 50px;
+            padding-top: 300px;
+            padding-bottom: 20px;
+            height: auto;
+            width: auto;
+            background-color: rgb(33, 51, 206);
 		}
+        .arrow{
+            margin-top: 260px;
+        }
+        .recomend{
+            margin-top: 20px;
+        }
 		
     </style>
 <body>
-	    <div class="bg-dark d-flex justify-content-center">
-			<p class="navbar-brand">BookSpace</p>
+    <div id="container">    
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div>
+                    <p class="titulo">BookSpace</p>
+                </div>
+            </div>
         </div>
-
+        <div class="row justify-content-center arrow">
+            <img src="./images/flecha.png" >
+        </div>
+    </div>
+    <div class="row d-flex justify-content-end recomend">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Alumnos</h2>
+                    <form id="1" action="j_security_check" method="POST" onsubmit="/nol2223/log2">
+                        <div class="form-group">
+                            <label for="username1">Usuario:</label>
+                            <input type="text" class="form-control" id="username1" name="j_username">
+                            <input type="hidden" id="rolForm1" value="rolalu">
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Contrase&ntilde;a:</label>
+                            <input type="password" class="form-control" id="password1" name="j_password">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" onclick="obtenerValor(1)">Iniciar Sesi&oacute;n</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
