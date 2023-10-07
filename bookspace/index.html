@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Centro educativo - Login</title>
+    <title>BookSpace</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
         function obtenerValor(form) {
@@ -68,25 +69,83 @@
 </head>
 <style>
         body {
-            background-color: #9EDBEA;
+            background-color: #ffffff;
         }
-        #warning {
-		  margin-top: 20px;
-		}
-		.navbar-brand {font-size: 30px;}
-		nav {
+        
+		.titulo {
 			font-size: 30px;
+            color: white;
   			display: flex;
 		  	justify-content: center; 
 		}
 		#container{
-		  margin-top: 50px;
+            padding-top: 300px;
+            padding-bottom: 20px;
+            height: auto;
+            width: auto;
+            background-color: rgb(33, 51, 206);
 		}
+        .arrow{
+            margin-top: 260px;
+        }
+        .recomend{
+            margin-top: 20px;
+        }
 		
     </style>
 <body>
-	    <div class="bg-dark d-flex justify-content-center">
-			<p class="navbar-brand">BookSpace</p>
+    <div id="container">    
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div>
+                    <p class="titulo">BookSpace</p>
+                </div>
+            </div>
         </div>
-
+        <div class="row justify-content-center arrow">
+            <img src="./images/flecha.png" >
+        </div>
+    </div>
+    <div class="row d-flex justify-content-end recomend">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div id="center-text">
+                        <h2>ChatBox UI</h2>
+                        <p>Message send and scroll to bottom enabled </p>
+                      </div> 
+                    <div id="body"> 
+                      
+                    <div id="chat-circle" class="btn btn-raised">
+                            <div id="chat-overlay"></div>
+                                <i class="material-icons">speaker_phone</i>
+                        </div>
+                      
+                      <div class="chat-box">
+                        <div class="chat-box-header">
+                          ChatBot
+                          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+                        </div>
+                        <div class="chat-box-body">
+                          <div class="chat-box-overlay">   
+                          </div>
+                          <div class="chat-logs">
+                           
+                          </div><!--chat-log -->
+                        </div>
+                        <div class="chat-input">      
+                          <form>
+                            <input type="text" id="chat-input" placeholder="Send a message..."/>
+                          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+                          </form>      
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
