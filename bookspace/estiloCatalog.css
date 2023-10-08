@@ -22,6 +22,7 @@ body{
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
+    position: relative;
 }
 
 .planet-container {
@@ -48,4 +49,20 @@ div {
     
     margin-top: auto;
     margin-bottom: auto;
+}
+.planet-button:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del botón */
+}
+
+/* Estilo del texto (alt) encima del botón */
+.planet-button:hover::before {
+    content: attr(title); /* Muestra el contenido del atributo alt como texto */
+    position: absolute;
+    top: -30px; /* Ajusta la posición vertical del texto encima del botón */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interior del texto */
+    border-radius: 5px; /* Bordes redondeados del fondo del texto */
+    font-size: 20px; /* Tamaño del texto */
 }
