@@ -3,7 +3,7 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import JSONResponse
 from spacebot.spacebot import SpaceBot
-from searcher import Searcher
+from searcher.searcher import Searcher
 import json
 
 app = FastAPI()
@@ -59,7 +59,7 @@ async def get_planet(request: Request, planet: str = Form(...)) -> JSONResponse:
 
 
 @app.post("/get_moon")
-async def get_moon(request: Request, moon: str = Form(...)) -> JSONResponse:
-    result = searcher.get_moon(moon)
+async def get_moon(request: Request) -> JSONResponse:
+    result = searcher.get_moon()
     json_compatible = jsonable_encoder(result)
     return JSONResponse(content=json_compatible)
