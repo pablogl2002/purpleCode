@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Saturn - Info</title>
+    <title>Jupiter - Info</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
@@ -53,10 +53,13 @@
                         avgOrbital = reply.avg_orbital;
                         avgTemp = reply.avg_temperatures;
                         offerTitle = reply.offer_title;
-                        offerDescription = reply.offrer_description;
+                        offerDescription = reply.offer_description;
                         planetCharacteristics = "Distance to the SUN: " + sunDistance + "<br/>" + "Distance to Earth: " + earthDistance + "<br/>" + "Length of a day (in Earth days)" + dayLength + "<br/>" + "Length of one year (in Earth years): " + yearLength + "<br/>" + "Diameter (in millions of kilometers): " + diam + "<br/>" + "Mass (kg): " + masa + "<br/>" + "Density (g/cm³): " + dens + "<br/>" + "Known Satellites: " + knownSatellites + "<br/>" + "Average orbital (Earth days to go round the sun): " + avgOrbital + "<br/>" + "Average Temperature (degrees Celsius): " + avgTemp + "<br/>";
             
                         document.getElementById("planet_charact").innerHTML = planetCharacteristics
+                        document.getElementById("planet_description").innerHTML = planetDescription
+                        document.getElementById("boli").innerHTML = offerTitle
+                        document.getElementById("tinta").innerHTML = offerDescription
                 },
                 error: (error) => { console.log(error) }
                 }); 
@@ -103,26 +106,26 @@
           <div class="home-container02">
             <img
                                     src="./images/jupiter_icon.png" 
-                                    style="width: 500px; height: 300px;"/>
+                                    style="width: 300px; height: 300px; margin-left: 190px;"/>
           </div>
           <div class="home-container03"></div>
           <div class=" row home-container04" style="margin-left: 200px; padding: 20px; background-color: #ffffff; border-radius: 20px; height: 300px;">
-            <h4 >Description</h4>
+            <h4 class="letraformato">Description</h4>
                                         
-                                        <p id="planet_description" ></br>Saturn, the celestial bling of the solar system, is like the Kardashian of planets, it's all about the glitz, glamour, and those fabulous rings! If Earth is a hip coffee shop, Saturn is the ultra-chic cocktail lounge where the universe's A-listers hang out.<br/>Picture a world with more style than a Parisian fashion runway, Saturn's got those iconic, shimmering rings that look like they're straight out of a cosmic jewelry store. They're like the planet's way of saying, 'I woke up like this, fabulous!'<br/>But Saturn isn't just about its fashion-forward appearance. It's also a planet with serious personality. With crazy-fast winds that make Earth's hurricanes look like a gentle breeze, Saturn is like the intergalactic roller coaster ride you never knew you signed up for.</p>
+                                        <p id="planet_description" class="letraformato"></br>Saturn, the celestial bling of the solar system, is like the Kardashian of planets, it's all about the glitz, glamour, and those fabulous rings! If Earth is a hip coffee shop, Saturn is the ultra-chic cocktail lounge where the universe's A-listers hang out.<br/>Picture a world with more style than a Parisian fashion runway, Saturn's got those iconic, shimmering rings that look like they're straight out of a cosmic jewelry store. They're like the planet's way of saying, 'I woke up like this, fabulous!'<br/>But Saturn isn't just about its fashion-forward appearance. It's also a planet with serious personality. With crazy-fast winds that make Earth's hurricanes look like a gentle breeze, Saturn is like the intergalactic roller coaster ride you never knew you signed up for.</p>
           </div>
           <div class="home-container05"></div>
         </div>
         <div class="home-container06">
           <div class="home-container07"></div>
           <div class="row home-container08" style="margin-right: 200px; padding: 20px; background-color: #ffffff; border-radius: 20px; height: 350px; width: 500px;">
-            <h4>Characteristics</h4>
-                                        <p id="planet_charact"> </br> Distance to the SUN: 1400 millions km <br/> Distance to Earth: 1300 millions km <br/> Length of a day (in Earth days): 1018 <br/> Length of one year (in Earth years): 10585 <br/> Diameter (in millions of kilometers): 116460 <br/> Mass (kg): 5.68E26 <br/> Density (g/cm³): 6.87 <br/> Known Satellites: 145 <br/> Average orbital (Earth days to go round the sun): 9.68 <br/> Average Temperature (degrees Celsius): -176 <br/></p>
+            <h4 class="letraformato">Characteristics</h4>
+                                        <p id="planet_charact" class="letraformato"> </br> Distance to the SUN: 1400 millions km <br/> Distance to Earth: 1300 millions km <br/> Length of a day (in Earth days): 1018 <br/> Length of one year (in Earth years): 10585 <br/> Diameter (in millions of kilometers): 116460 <br/> Mass (kg): 5.68E26 <br/> Density (g/cm³): 6.87 <br/> Known Satellites: 145 <br/> Average orbital (Earth days to go round the sun): 9.68 <br/> Average Temperature (degrees Celsius): -176 <br/></p>
           </div>
           <div class="home-container09"></div>
           <div class="home-container10" style="margin-right: 200px;">
             <img
-                                    src="./images/planetas/jupiter1.png" 
+                                    src="./images/jupiter1.jpg" 
                                     style="width: 500px; height: 300px; border-radius: 20px; "/>
           </div>
         </div>
@@ -134,8 +137,8 @@
           </div>
           <div class="home-container13"></div>
           <div class=" row home-container14" style="margin-left: 200px; padding: 20px; background-color: #ffffff; border-radius: 20px;">
-              <h4>Don't gift her a ring, gift her Saturn...</h4>
-              <p><br>For those who are in love and whishing to spend the most romantic holidays in the entire Solar System, come and visit Saturn and enjoy it's magnificent rings. 
+              <h4 id="boli" class="letraformato">Don't gift her a ring, gift her Saturn...</h4>
+              <p id="tinta" class="letraformato"><br>For those who are in love and whishing to spend the most romantic holidays in the entire Solar System, come and visit Saturn and enjoy it's magnificent rings. 
               </p>
           </div>
           <div class="home-container15"></div>
@@ -143,16 +146,16 @@
       </div>
       <div id="carouselExampleSlidesOnly" class="carousel slide centrao col-md-8" data-bs-ride="carousel"
       data-interval="300" style="max-width: 100%;">
+      <div class="carousel-item active">
       <div class="carousel-inner">
-          <div class="carousel-item active">
-              <div class="row" style="margin-left: 20px; border: 2px solid white; margin-right: 5px;">
-                  <div class="col-md-5" style="align-items: center; margin-left: 40px;">
-                      <img id="image1" src="./images/io.png" style="width: 200px; height: 200px;">
-                  </div>
-                  <div class="col-md-5"
-                      style="margin-top: 20px; background-color: lightblue; color:black; margin-left: 5px;">
-                      <h2 id="planeta1">Io</h2>
-                      <p id="text1">Io is the innermost of Jupiter's four largest moons and is the
+        <div class="row" style="margin-bottom: 10px; border-radius: 20px; margin-left: 20px; border: 2px solid white; margin-right: 5px;">
+          <div class="col-md-4" style="align-items: center; margin-left: 40px;">
+            <img id="image2" src="./images/europa.png" style="width: 200px; height: 200px;">
+          </div>
+          <div class="col-md-4"
+                    style="border-radius: 20px; margin-top: 20px; background-color: #ffffff; color:black; margin-left: 5px;">
+                  <h2 id="planeta1" class="letraformato">Io</h2>
+                      <p id="text1" class="letraformato">Io is the innermost of Jupiter's four largest moons and is the
                           most volcanically active body in our solar system, with over 400 active
                           volcanoes. The intense tidal forces generated by Jupiter's gravity cause
                           constant flexing and heating of Io's interior, leading to its fiery
@@ -162,48 +165,54 @@
               </div>
           </div>
           <div class=" carousel-item">
-              <div class="row" style="margin-left: 20px; border: 2px solid white;  margin-right: 5px;">
-                  <div class="col-md-4" style="align-items: center; margin-left: 40px;">
-                      <img id="image2" src="./images/europa.png" style="width: 200px; height: 200px;">
-                  </div>
-                  <div class="col-md-4"
-                      style="margin-top: 20px; background-color: lightblue; color:black; margin-left: 5px;">
-                      <h2 id="planeta2">Europa</h2>
-                      <p id="text2">Europa is the smallest of the four Galilean moons but is known
+            <div class="carousel-inner">
+            <div class="row" style="margin-bottom: 10px; border-radius: 20px; margin-left: 20px; border: 2px solid white; margin-right: 5px;">
+              <div class="col-md-4" style="align-items: center; margin-left: 40px;">
+                <img id="image2" src="./images/europa.png" style="width: 200px; height: 200px;">
+              </div>
+              <div class="col-md-4"
+                        style="border-radius: 20px; margin-top: 20px; background-color: #ffffff; color:black; margin-left: 5px;">
+                  <h2 id="planeta2" class="letraformato">Europa</h2>
+                      <p id="text2" class="letraformato">Europa is the smallest of the four Galilean moons but is known
                           for its smooth, icy surface with intriguing cracks and lines. It's
                           believed to have a subsurface ocean beneath its icy crust, making it a
                           prime target in the search for extraterrestrial life. In mythology,
                           Europa was a Phoenician princess kidnapped by Zeus.</p>
                   </div>
               </div>
+              </div>
           </div>
           <div class="carousel-item">
-              <div class="row" style="margin-left: 20px; border: 2px solid white;  margin-right: 5px;">
-                  <div class="col-md-4" style="align-items: center; margin-left: 40px;">
-                      <img id="image3" src="./images/ganymede.png" style="width: 200px; height: 200px;">
-                  </div>
-                  <div class="col-md-4"
-                      style="margin-top: 20px; background-color: lightblue; color:black; margin-left: 5px;">
-                      <h2 id="planeta3">Ganymede</h2>
-                      <p id="text3">Ganymede is the largest moon in the solar system, even bigger
+            <div class="carousel-inner">
+
+            <div class="row" style="margin-bottom: 10px; border-radius: 20px; margin-left: 20px; border: 2px solid white; margin-right: 5px;">
+            <div class="col-md-4" style="align-items: center; margin-left: 40px;">
+              <img id="image3" src="./images/ganymede.png" style="width: 200px; height: 200px;">
+            </div>
+            <div class="col-md-4"
+                      style="border-radius: 20px; margin-top: 20px; background-color: #ffffff; color:black; margin-left: 5px;">
+                <h2 id="planeta3" class="letraformato">Ganymede</h2>
+                      <p id="text3" class="letraformato">Ganymede is the largest moon in the solar system, even bigger
                           than the planet Mercury. It has its own magnetic field and a diverse
                           landscape with both heavily cratered regions and younger, grooved
                           terrains. In Greek mythology, Ganymede was a Trojan prince who was taken
                           by Zeus to be his cupbearer on Mount Olympus.</p>
                   </div>
               </div>
-
+</div>
           </div>
 
           <div class="carousel-item">
-              <div class="row" style="margin-left: 20px; border: 2px solid white; margin-right: 5px;">
+            <div class="carousel-inner">
+
+            <div class="row" style="margin-bottom: 10px; border-radius: 20px; margin-left: 20px; border: 2px solid white; margin-right: 5px;">
                   <div class="col-md-4" style="align-items: center; margin-left: 40px;">
                       <img id="image4" src="./images/callisto.png" style="width: 200px; height: 200px;">
                   </div>
                   <div class="col-md-4"
-                      style="margin-top: 20px; background-color: lightblue; color:black; margin-left: 5px;">
-                      <h2 id="planeta4">Callisto</h2>
-                      <p id="text4">Callisto is one of the most heavily cratered objects in the solar system,
+                            style="border-radius: 20px; margin-top: 20px; background-color: #ffffff; color:black; margin-left: 5px;">
+                      <h2 id="planeta4" class="letraformato">Callisto</h2>
+                      <p id="text4" class="letraformato">Callisto is one of the most heavily cratered objects in the solar system,
                           indicating a lack of significant geological activity. It is believed to be one of the
                           oldest objects in the solar system. In Greek mythology, Callisto was a nymph and
                           companion of Artemis who was turned into a bear by Zeus.</p>
@@ -211,7 +220,7 @@
               </div>
 
           </div>
-
+</div>
       </div>
      </div>
     </div>
