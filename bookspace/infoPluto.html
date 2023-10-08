@@ -3,11 +3,31 @@
 <head>
     <title>Centro educativo - Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/components/carousel/">
     <link rel="stylesheet" type="text/css" href="./assets/styles.css">
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
-        var planet
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     // Obtener el valor del campo oculto
+        //     var planetName = document.getElementById('planet_name').value;
+
+        //     // Obtener el elemento <p> donde deseas mostrar la información
+        //     var planetInfo = document.getElementById('planeta');
+        //     planetInfo.innerHTML(planetName);
+
+        // });
+
+        $(document).ready(function() {
+            var planet = "pluto";
+            var planetName = "Pluto";
+
+            
+            // Mostrar el valor en el elemento <p>
+            $('#planet_title').text('' + planetName);
+        }); 
+
     </script>
 </head>
 <style>
@@ -62,7 +82,7 @@
                     <div class="card 1">
                         <div class="card_image"> <img src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" /> </div>
                         <div class="card_title title-white">
-                            <p>MARS</p>
+                            <p id="planeta">The planet</p>
                         </div>
                     </div>
                 </td>
@@ -71,9 +91,9 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6 item">
                                 <div class="item-in text-card">
-                                    <h4>Some Kind of Title</h4>
+                                    <h4 id="planet_title"></h4>
                                     <div class="seperator"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                    <p id="planet_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
                                     </a>
                                 </div>
                             </div>
@@ -87,9 +107,9 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6 item">
                                 <div class="item-in text-card">
-                                    <h4>Some Kind of Title</h4>
+                                    <h4>Characteristics</h4>
                                     <div class="seperator"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                    <p id="planet_charact"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
                                     </a>
                                 </div>
                             </div>
@@ -100,7 +120,7 @@
                     <div class="card 1">
                         <div class="card_image"> <img src="./images/planetas-dibujos-animados-sistema-solar-establecidos-fondo-espacio-cielo-oscuro_53562-2412.avif" /> </div>
                         <div class="card_title title-white">
-                            <p>MARS</p>
+                            <p></p>
                         </div>
                     </div>
                 </td>
@@ -111,9 +131,9 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6 item">
                                 <div class="item-in text-card">
-                                    <h4>Some Kind of Title</h4>
+                                    <h4 id="offer_tit">Some Kind of Title</h4>
                                     <div class="seperator"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                    <p id="offer_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
                                     </a>
                                 </div>
                             </div>
@@ -124,7 +144,6 @@
                     <div class="card 1">
                         <div class="card_image"> <img src="./images/planetas-dibujos-animados-sistema-solar-establecidos-fondo-espacio-cielo-oscuro_53562-2412.avif" /> </div>
                         <div class="card_title title-white">
-                            <p>MARS</p>
                         </div>
                     </div>
                 </td>
