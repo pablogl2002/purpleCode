@@ -57,7 +57,6 @@
                         offerDescription = reply.offrer_description;
                         planetCharacteristics = "Distance to the SUN: " + sunDistance + "<br/>" + "Distance to Earth: " + earthDistance + "<br/>" + "Length of a day (in Earth days)" + dayLength + "<br/>" + "Length of one year (in Earth years): " + yearLength + "<br/>" + "Diameter (in millions of kilometers): " + diam + "<br/>" + "Mass (kg): " + masa + "<br/>" + "Density (g/cm³): " + dens + "<br/>" + "Known Satellites: " + knownSatellites + "<br/>" + "Average orbital (Earth days to go round the sun): " + avgOrbital + "<br/>" + "Average Temperature (degrees Celsius): " + avgTemp + "<br/>";
             
-                        document.getElementById("planeta").innerHTML = planetName
                         document.getElementById("planet_description").innerHTML = planetDescription
                         document.getElementById("planet_charact").innerHTML = planetCharacteristics
                         document.getElementById("offer_tit").innerHTML = offerTitle
@@ -136,12 +135,11 @@
             <tbody>
                 <tr>
                     <td>
-                        <div class="card 1">
-                            <div class="card_image"> <img
-                                    src="./images/saturn_icon.png" />
-                            </div>
-                            <div class="card_title title-white">
-                                <p id="planeta">The planet</p>
+                        <div style="width: 100px; height: 100px;">
+                            <div class="card_image" style="width: 100px; height: 100px;"> <img
+                                    src="./images/saturn_icon.png" style="background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-attachment: fixed;"/>
                             </div>
                         </div>
                     </td>
