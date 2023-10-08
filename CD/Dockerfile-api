@@ -1,9 +1,9 @@
 FROM python:3.10
 WORKDIR /api/
-COPY cookies/* /api/cookies/
-COPY spacebot/* /api/spacebot/
-COPY api.py /api/
-COPY requirements.txt /api/
+COPY ./purpleCode/cookies/* /api/cookies/
+COPY ./purpleCode/spacebot/* /api/spacebot/
+COPY ./purpleCode/api.py /api/
+COPY ./purpleCode/requirements.txt /api/
 
 ENV ENV_BOT_EMAIL "adri_mrtnz@hotmail.com"
 ENV ENV_BOT_PASSWD "BotSpaceApps2023"
