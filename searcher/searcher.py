@@ -1,4 +1,3 @@
-import sqlalchemy
 import pandas as pd
 import mysql.connector
 
@@ -30,21 +29,21 @@ class Searcher:
         pointer = self.get_cursor()
         pointer.execute(f'SELECT * FROM planets WHERE name = "{planet}"')
         planets = pointer.fetchall()
-        self.planet_json(columns, planets)
-        return planets
+        return self.planet_json(columns, planets)
 
 
     def planet_json(self, columns, t):
         datos = {}
         print(len(t))
         for i in range(len(columns)):
-            datos[columns[i]] = t[0][i]            
+            datos[columns[i]] = t[0][i] 
+        return datos           
 
-    def moon_json(self, columns, t):
+    def moon_json(self, columns, lunas):
         datos = {}
-        print(len(t))
+        print(len(lunas))
         j=0
-        for l in t:
+        for l in lunas:
             print(l)
             for j in range(len(columns)):
                 print(columns[j])
@@ -53,13 +52,12 @@ class Searcher:
         return datos
 
 
-    def get_moon(self, planet):
+    def get_moon(self):
         columns = ["name", "planet", "planet_distance", "diameter", "orbit_days", "description"]
 
         pointer = self.get_cursor()
         pointer.execute('SELECT * FROM moons')
         lunas = pointer.fetchall()
-        #print(lunas)
         print(self.moon_json(columns, lunas))
         return lunas
     
