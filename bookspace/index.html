@@ -18,6 +18,13 @@
             window.location.href = "catalog.html";
         }
 
+        
+//        $(document).ready(miFuncion());
+
+        $(function() {
+        var INDEX = 0; 
+
+
         function miFuncion() {
             var planetas = ["Mercury", "Venus", "Mars", "Saturn", "Jupiter", "Neptune", "Uranus", "Pluto"]
             var ofertas = ["p1","p2","p3"]
@@ -33,7 +40,7 @@
 
             for (var i = 1; i <= ofertas.length; i++) {
                 $.ajax({
-                url: "http://127.0.0.1:8080/get_planeta",
+                url: "http://127.0.0.1:8080/get_planet",
                 method: "POST",
                 contentType: "application/x-www-form-urlencoded", 
                 data: {"planet": "" + ofertas[i]},
@@ -58,10 +65,9 @@
                 }); 
             }
         }
-        document.addEventListener("DOMContentLoaded", miFuncion);
+        document.addEventListener("DOMContentLoaded", miFuncion)
 
-        $(function() {
-        var INDEX = 0; 
+
         $("#chat-submit").click(async function(e) {
             e.preventDefault();
             var msg = $("#chat-input").val(); 
