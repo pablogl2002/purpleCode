@@ -5,8 +5,8 @@ from hugchat.login import Login
 # email = os.getenv("ENV_BOT_EMAIL")
 # passwd = os.getenv("ENV_BOT_PASSWD")
 # cookies_path_dir = os.getenv("ENV_BOT_COOKIES")
-email = 'adri_mrtnz@hotmail.com'
-passwd = 'BotSpaceApps2023'
+email = 'akc33333@gmail.com'
+passwd = 'Jorge1234!.'
 cookies_path_dir = './cookies/'
 
 
