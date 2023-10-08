@@ -45,9 +45,9 @@
 
             planetas = planetas.filter(function(planeta) {return planeta !== ofertas[2];});
 
-
             for (var i = 0; i < ofertas.length; i++) {
                 console.log("Bucle " + i)
+                
                 $.ajax({
                 url: "http://127.0.0.1:8080/get_planet",
                 method: "POST",
@@ -60,11 +60,11 @@
                         var cuerpo = reply.offer_description
 
                         var img = reply.images
-                        var path = img + "1.png"
+                        var path = "." + img + "1.png"
                     
-                        var n = "planeta" + numero
-                        var x = "text" + numero
-                        var g = "image" + numero
+                        var n = "planeta" + i
+                        var x = "text" + i
+                        var g = "image" + i
 
                         document.getElementById(n).innerHTML = intro
                         document.getElementById(x).innerHTML = cuerpo
