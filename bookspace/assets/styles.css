@@ -265,3 +265,12 @@ h4 {
     height: 100vh;
     /* Altura de la pantalla completa */
   }
+
+  .full-width {
+    width: 100%; /* Establecer el ancho al 100% */
+    background-color: whitesmoke; /* Ejemplo: color de fondo */
+}
+.carouselExampleSlidesOnly {
+  max-width: 100%;
+}
+}
