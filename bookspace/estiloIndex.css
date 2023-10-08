@@ -238,3 +238,13 @@
         justify-content: center;
         align-items: center;
     }
+
+    .titulito{
+        font-size: 50px;
+        font-family: Lato;
+        font-weight: 700;
+    }
+    .textito{
+        font-size: 30px;
+        font-family: Lato;
+    }
