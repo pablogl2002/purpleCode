@@ -26,8 +26,8 @@ services:
       - ENV_BOT_PASSWD=BotSpaceApps2023
       - ENV_BOT_COOKIES=/app/cookies
     volumes:
-      - ./cookies:/api/cookies 
-      - ./spacebot:/api/spacebot 
+      - ./purpleCode/cookies:/api/cookies 
+      - ./purpleCode/spacebot:/api/spacebot 
     networks:
       - mynet
 
