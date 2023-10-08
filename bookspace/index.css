@@ -9,7 +9,12 @@ body {
   color: #777;
 }
 
-
+.letraformato{
+  font-family: 'Merriweather', serif;
+  color: #777;
+  padding-top: 5px; 
+  padding-left: 5px;
+}
 
 .home-container {
   width: 100%;
@@ -31,7 +36,6 @@ body {
 .home-container02 {
   flex: 0 0 auto;
   width: 342px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 296px;
   display: flex;
   align-items: flex-start;
@@ -39,21 +43,18 @@ body {
 }
 .home-container03 {
   width: 34px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100px;
   display: flex;
   align-items: flex-start;
 }
 .home-container04 {
   width: 813px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 182px;
   display: flex;
   align-items: flex-start;
 }
 .home-container05 {
   width: 34px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100px;
   display: flex;
   align-items: flex-start;
@@ -67,21 +68,18 @@ body {
 }
 .home-container07 {
   width: 34px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100px;
   display: flex;
   align-items: flex-start;
 }
 .home-container08 {
   width: 813px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 182px;
   display: flex;
   align-items: flex-start;
 }
 .home-container09 {
   width: 34px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100px;
   display: flex;
   align-items: flex-start;
@@ -89,7 +87,6 @@ body {
 .home-container10 {
   flex: 0 0 auto;
   width: 340px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 313px;
   display: flex;
   align-items: flex-start;
@@ -106,7 +103,6 @@ body {
 .home-container12 {
   flex: 0 0 auto;
   width: 342px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 296px;
   display: flex;
   align-items: flex-start;
@@ -114,21 +110,18 @@ body {
 }
 .home-container13 {
   width: 34px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100px;
   display: flex;
   align-items: flex-start;
 }
 .home-container14 {
   width: 813px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 182px;
   display: flex;
   align-items: flex-start;
 }
 .home-container15 {
   width: 34px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100px;
   display: flex;
   align-items: flex-start;
