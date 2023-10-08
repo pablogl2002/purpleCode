@@ -93,7 +93,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body{
-  background-image: "./fondoInfo.jpg";
+  background-image: url(./../images/fondoInfo.jpg);
   font-family: 'Merriweather', serif;
   font-size: 16px;
   color:#777;
