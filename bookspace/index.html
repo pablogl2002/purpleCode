@@ -42,12 +42,17 @@
                         //generate message con la respuesta respuesta (msg,self) 
                         var intro = reply.offer_title 
                         var cuerpo = reply.offer_description
+
+                        var img = reply.images
+                        var path = img + i 
                     
                         var n = "planeta" + i
                         var x = "text" + i
+                        var g = "image" + i
 
                         document.getElementById(n).innerHTML = intro
                         document.getElementById(x).innerHTML = cuerpo
+                        document.getElementById(g).src = path
                     } 
                 }
                 }); 
@@ -181,6 +186,10 @@ function generate_message(msg, type) {
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
         $("#spacebot").toggle('scale');
+
+        for(var i = INDEX; i>=0; i--){
+            document.getElementById("cm-msg-" + INDEX).remove()
+        }
     })
 
     
@@ -192,9 +201,7 @@ function generate_message(msg, type) {
     <div id="container">    
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <div>
-                    <h7 class="titulo">BookSpace</h7>
-                </div>
+                
             </div>
         </div>
         <div class="row justify-content-center arrow">
@@ -203,12 +210,12 @@ function generate_message(msg, type) {
     </div>
     
     <div class="row d-flex justify-content-end recomend">
-          <div id="carouselExampleSlidesOnly" class="carousel slide row centrao col-md-8" data-bs-ride="carousel" data-interval="2500">
+          <div id="carouselExampleSlidesOnly" class="carousel slide row centrao col-md-8" data-bs-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row" style="margin-left: 20px;">
                     <div class="col-md-4">
-                        <img src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
+                        <img id="image1" src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
                         <h2 id="planeta1">Mercurio</h2>
@@ -219,7 +226,7 @@ function generate_message(msg, type) {
               <div class=" carousel-item">
                 <div class="row" style="margin-left: 20px;">
                     <div class="col-md-4">
-                        <img src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
+                        <img id="image2" src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
                         <h2 id="planeta2">Venus</h2>
@@ -230,7 +237,7 @@ function generate_message(msg, type) {
               <div class="carousel-item">
                 <div class="row" style="margin-left: 20px;">
                     <div class="col-md-4">
-                        <img src="./images/starfall-gif-46.gif" style="width: 200px; height: 200px;">
+                        <img id="image3" src="./images/starfall-gif-46.gif" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
                         <h2 id="planeta3">Tierra</h2>

@@ -220,7 +220,7 @@
         background-size: cover; /* o 'contain' según tu preferencia */
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-image: url(./images/bookspace.jpg);
+        background-image: url(./images/bookspace.png);
     }
     .arrow{
         margin-top: 260px;
