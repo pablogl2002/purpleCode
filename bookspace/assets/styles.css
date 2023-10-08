@@ -230,4 +230,9 @@ h1,h4{
   }
 @media only screen and (max-width : 768px) {
   .item .icon{position: relative; top: 0; left:0;}
+
+  .centrao{
+    justify-content: left;
+    align-items: center;
+}
 }
