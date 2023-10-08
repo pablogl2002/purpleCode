@@ -30,12 +30,18 @@
             var ofertas = ["p1","p2","p3"]
             var numeroRandom = Math.floor(Math.random() * 6); 
             ofertas[0] = planetas[numeroRandom]
+            
+            planetas = planetas.filter(function(planeta) {return planeta !== ofertas[0];});
 
             var numeroRandom = Math.floor(Math.random() * 5);
             ofertas[1] = planetas[numeroRandom]
 
+            planetas = planetas.filter(function(planeta) {return planeta !== ofertas[1];});
+
             var numeroRandom = Math.floor(Math.random() * 4);
             ofertas[2] = planetas[numeroRandom]
+
+            planetas = planetas.filter(function(planeta) {return planeta !== ofertas[2];});
 
 
             for (var i = 1; i <= ofertas.length; i++) {
@@ -65,7 +71,7 @@
                 }); 
             }
         }
-        document.addEventListener("DOMContentLoaded", miFuncion)
+        $(document).ready(miFuncion())
 
 
         $("#chat-submit").click(async function(e) {
