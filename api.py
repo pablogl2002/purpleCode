@@ -45,7 +45,7 @@ async def bot_query(request: Request, query: str = Form(...)) -> JSONResponse:
 
 def get_welcome_msg() -> JSONResponse:
         result = {
-            'response': "👋 Welcome to the Bookspace Recomender, my name is SpaceBot🪐. Tell me your needs and I'll recommend what better suits you!"
+            'response': "👋 Welcome to the Bookspace Recommender, my name is SpaceBot🪐. Tell me your needs and I'll recommend what better suits you!"
         }
         json_compatible_item_data = jsonable_encoder(result)
         return JSONResponse(content=json_compatible_item_data)

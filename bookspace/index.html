@@ -24,7 +24,7 @@
         $(function() {
         var INDEX = 0; 
 
-
+/*
         async function miFuncion() {
             var planetas = ["Mercury", "Venus", "Mars", "Saturn", "Jupiter", "Neptune", "Uranus", "Pluto"]
             //var planetas = ["Venus", "Mars", "Saturn", "Jupiter", "Neptune", "Uranus", "Pluto"]
@@ -79,6 +79,8 @@
             }
         }
         $(document).ready(miFuncion())
+
+*/
 
 
         $("#chat-submit").click(async function(e) {
@@ -234,33 +236,37 @@
               <div class="carousel-item active">
                 <div class="row" style="margin-left: 20px;">
                     <div class="col-md-4">
-                        <img id="image1" src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
+                        <img id="image1" src="./images/mercury_icon.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
-                        <h2 id="planeta1">Mercury</h2>
-                        <p id="text1">Lorem ipsum</p>
+                        <h2 id="planeta1" class="titulito">Mercury</h2>
+                        <p id="text1" class="textito">
+                            The perfect trip for the Solarium lovers!
+                        </p>
                     </div>
                 </div>
               </div>
               <div class=" carousel-item">
                 <div class="row" style="margin-left: 20px;">
                     <div class="col-md-4">
-                        <img id="image2" src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" style="width: 200px; height: 200px;">
+                        <img id="image2" src="./images/jupiter_icon.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
-                        <h2 id="planeta2">Venus</h2>
-                        <p id="text2">Lorem ipsum</p>
+                        <h2 id="planeta2" class="titulito">Jupiter</h2>
+                        <p id="text2" class="textito">
+                            A trip designed for those who want something big
+                        </p>
                     </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="row" style="margin-left: 20px;">
                     <div class="col-md-4">
-                        <img id="image3" src="./images/starfall-gif-46.gif" style="width: 200px; height: 200px;">
+                        <img id="image3" src="./images/saturn_icon.png" style="width: 200px; height: 200px;">
                     </div>
                     <div class="col-md-4" style="margin-top: 20px;">
-                        <h2 id="planeta3">Tierra</h2>
-                        <p id="text3">Lorem ipsum</p>
+                        <h2 id="planeta3" class="titulito">Saturn</h2>
+                        <p id="text3" class = "textito">Don't gift her a ring, gift her Saturn...</p>
                     </div>
                 </div>
                 
@@ -275,11 +281,11 @@
             <div class="card" style="height: 578px; width: 400px; margin-bottom: 10px;">
                 <div class="card-body">
                     <div id="center-text">
-                        <h2>SpaceBoot</h2>
+                        <h2 class="titulito">SpaceBot</h2>
                         <img src="./images/spacebot.png" id="spacebot">
                         <div class="chat-box">
                             <div class="chat-box-header">
-                              Recomendator
+                              Recommender
                               <span class="chat-box-toggle"><i class="material-icons"><img style="width: 30px; height: 30px; " src="./images/cerrar.png"/></i></span>
                             </div>
                             <div class="chat-box-body">
