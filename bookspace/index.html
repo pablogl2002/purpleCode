@@ -30,15 +30,22 @@
             var ofertas = ["p1","p2","p3"]
             var numeroRandom = Math.floor(Math.random() * 6); 
             ofertas[0] = planetas[numeroRandom]
+            
+            planetas = planetas.filter(function(planeta) {return planeta !== ofertas[0];});
 
             var numeroRandom = Math.floor(Math.random() * 5);
             ofertas[1] = planetas[numeroRandom]
 
+            planetas = planetas.filter(function(planeta) {return planeta !== ofertas[1];});
+
             var numeroRandom = Math.floor(Math.random() * 4);
             ofertas[2] = planetas[numeroRandom]
 
+            planetas = planetas.filter(function(planeta) {return planeta !== ofertas[2];});
 
-            for (var i = 1; i <= ofertas.length; i++) {
+
+            for (var i = 0; i < ofertas.length; i++) {
+                var numero = 1
                 $.ajax({
                 url: "http://127.0.0.1:8080/get_planet",
                 method: "POST",
@@ -51,11 +58,11 @@
                         var cuerpo = reply.offer_description
 
                         var img = reply.images
-                        var path = img + i 
+                        var path = img + numero 
                     
-                        var n = "planeta" + i
-                        var x = "text" + i
-                        var g = "image" + i
+                        var n = "planeta" + numero
+                        var x = "text" + numero
+                        var g = "image" + numero
 
                         document.getElementById(n).innerHTML = intro
                         document.getElementById(x).innerHTML = cuerpo
@@ -65,7 +72,7 @@
                 }); 
             }
         }
-        document.addEventListener("DOMContentLoaded", miFuncion)
+        $(document).ready(miFuncion())
 
 
         $("#chat-submit").click(async function(e) {
