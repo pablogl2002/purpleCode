@@ -19,8 +19,8 @@
         }
 
         function miFuncion() {
-            var planetas = [Mercury, Venus, Mars, Saturn, Jupiter, Neptune, Uranus, Pluto]
-            var ofertas = [p1,p2,p3]
+            var planetas = ["Mercury", "Venus", "Mars", "Saturn", "Jupiter", "Neptune", "Uranus", "Pluto"]
+            var ofertas = ["p1","p2","p3"]
             var numeroRandom = Math.floor(Math.random() * 6); 
             ofertas[0] = planetas[numeroRandom]
 
@@ -36,7 +36,7 @@
                 url: "http://127.0.0.1:8080/get_planeta",
                 method: "POST",
                 contentType: "application/x-www-form-urlencoded", 
-                data: {"planet": ofertas[i]},
+                data: {"planet": "" + ofertas[i]},
                 success: function(reply) {
                     if(reply){
                         //generate message con la respuesta respuesta (msg,self) 
