@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Centro educativo - Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/components/carousel/">
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script>
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     // Obtener el valor del campo oculto
+        //     var planetName = document.getElementById('planet_name').value;
+
+        //     // Obtener el elemento <p> donde deseas mostrar la información
+        //     var planetInfo = document.getElementById('planeta');
+        //     planetInfo.innerHTML(planetName);
+
+        // });
+
+        $(document).ready(function() {
+            var planet = "earth";
+
+            var planetName = "Earth";
+
+            // Mostrar el valor en el elemento <p>
+            $('#planet_title').text('' + planetName);
+        }); 
+
+    </script>
+</head>
+<style>
+        td {
+            display: table-cell;
+            vertical-align: top;
+        }
+        body {
+            background-color: #ffc8c8;
+            /*background-image: url('./images/starfall-gif-46.gif'); /* Reemplaza 'tu-archivo.gif' con la ruta correcta de tu archivo GIF */
+            background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
+            background-repeat: no-repeat; /* Evita que el fondo se repita */
+        }
+        #warning {
+		  margin-top: 20px;
+		}
+		.navbar-brand {font-size: 30px;}
+		nav {
+			font-size: 30px;
+  			display: flex;
+		  	justify-content: center; 
+		}
+		#container{
+		  margin-top: 50px;
+		}
+        .contenedor {
+            width: 200px; /* Establece el ancho máximo del contenedor */
+            /*border: 1px solid #ccc; /* Borde para el contenedor (opcional) */
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .texto {
+            white-space:pre-wrap; /* Hace que el texto se divida en varias líneas */
+        }
+        .planet-card{
+            width: 100%;
+
+        }
+        .text-card{
+            top: -4%;
+            border-radius: 20px;
+        }
+
+		
+</style>
+<body>
+    <div class="table-responsive">
+        <table>
+          <tbody>
+            <tr>
+                <td>
+                    <div class="card 1">
+                        <div class="card_image"> <img src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" /> </div>
+                        <div class="card_title title-white">
+                            <p id="planeta">The planet</p>
+                        </div>
+                    </div>
+                </td>
+                <td>                      
+                    <div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 item">
+                                <div class="item-in text-card">
+                                    <h4 id="planet_title"></h4>
+                                    <div class="seperator"></div>
+                                    <p id="planet_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 item">
+                                <div class="item-in text-card">
+                                    <h4>Characteristics</h4>
+                                    <div class="seperator"></div>
+                                    <p id="planet_charact"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card 1">
+                        <div class="card_image"> <img src="./images/planetas-dibujos-animados-sistema-solar-establecidos-fondo-espacio-cielo-oscuro_53562-2412.avif" /> </div>
+                        <div class="card_title title-white">
+                            <p></p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 item">
+                                <div class="item-in text-card">
+                                    <h4 id="offer_tit">Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p id="offer_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card 1">
+                        <div class="card_image"> <img src="./images/planetas-dibujos-animados-sistema-solar-establecidos-fondo-espacio-cielo-oscuro_53562-2412.avif" /> </div>
+                        <div class="card_title title-white">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
