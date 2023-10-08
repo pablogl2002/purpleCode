@@ -27,7 +27,7 @@ services:
       - ENV_BOT_COOKIES=/app/cookies
     volumes:
       - ./purpleCode/cookies:/api/cookies 
-      - ./purpleCode/spacebot:/api/spacebot 
+      - ./purpleCode/:/api/
     networks:
       - mynet
 
