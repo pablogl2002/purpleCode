@@ -1,224 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Centro educativo - Login</title>
+    <title>Uranus - Info</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/components/carousel/">
     <link rel="stylesheet" type="text/css" href="./assets/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script>
-        $(function () {
-            $(document).ready(async function () {
-                var planet = "earth";
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            $(function () {
+                $(document).ready(async function () {
+                    var planet = "uranus";
 
-                var planetName;
-                var planetDescription;
-                var sunDistance;
-                var earthDistance;
-                var dayLength;
-                var yearLength;
-                var diam;
-                var masa;
-                var dens;
-                var knownSatellites;
-                var avgOrbital;
-                var avgTemp;
-                var offerTitle;
-                var offerDescription;
-                var planetCharacteristics;
+                    var planetName;
+                    var planetDescription;
+                    var sunDistance;
+                    var earthDistance;
+                    var dayLength;
+                    var yearLength;
+                    var diam;
+                    var masa;
+                    var dens;
+                    var knownSatellites;
+                    var avgOrbital;
+                    var avgTemp;
+                    var offerTitle;
+                    var offerDescription;
+                    var planetCharacteristics;
 
 
-                planetCharacteristics = "Distance to the SUN: " + 2870 + "<br/>" + "Distance to Earth: " + 2600 + "<br/>" + "Length of a day (in Earth days)" + 353 + "<br/>" + "Length of one year (in Earth years): " + 30660 + "<br/>" + "Diameter (in millions of kilometers): " + 51118 + "<br/>" + "Mass (kg): " + 8,6816E+25 + "<br/>" + "Density (g/cm³): " + "19,05" + "<br/>" + "Known Satellites: " + 27 + "<br/>" + "Average orbital (Earth days to go round the sun): " + "6,81" + "<br/>" + "Average Temperature (degrees Celsius): " + "-195" + "<br/>";
+                    planetCharacteristics = "Distance to the SUN: " + 2870 + "<br/>" + "Distance to Earth: " + 2600 + "<br/>" + "Length of a day (in Earth days)" + 353 + "<br/>" + "Length of one year (in Earth years): " + 30660 + "<br/>" + "Diameter (in millions of kilometers): " + 51118 + "<br/>" + "Mass (kg): " + 8, 6816E+25 + "<br/>" + "Density (g/cm³): " + "19,05" + "<br/>" + "Known Satellites: " + 27 + "<br/>" + "Average orbital (Earth days to go round the sun): " + "6,81" + "<br/>" + "Average Temperature (degrees Celsius): " + "-195" + "<br/>";
 
-                        document.getElementById("planet_charact").innerHTML = planetCharacteristics
+                    document.getElementById("planet_charact").innerHTML = planetCharacteristics
 
-                $.ajax({
-                    url: "http://127.0.0.1:8080/get_planet",
-                    method: "POST",
-                    contentType: "application/x-www-form-urlencoded",
-                    data: { "planet": "" + planet },
-                    success: function (reply) {
 
-                        planetName = "Uranus";
-                        planetDescription = reply.description;
-                        sunDistance = reply.sun_distance;
-                        earthDistance = reply.earth_distance;
-                        dayLength = reply.day_length;
-                        yearLength = reply.year_length;
-                        diam = reply.diameter;
-                        masa = reply.mass;
-                        dens = reply.density;
-                        knownSatellites = reply.known_satellites;
-                        avgOrbital = reply.avg_orbital;
-                        avgTemp = reply.avg_temperatures;
-                        offerTitle = reply.offer_title;
-                        offerDescription = reply.offrer_description;
-                        planetCharacteristics = "Distance to the SUN: " + 2870 + "<br/>" + "Distance to Earth: " + 2600 + "<br/>" + "Length of a day (in Earth days)" + 353 + "<br/>" + "Length of one year (in Earth years): " + 30660 + "<br/>" + "Diameter (in millions of kilometers): " + 51118 + "<br/>" + "Mass (kg): " + 8,6816E+25 + "<br/>" + "Density (g/cm³): " + "19,05" + "<br/>" + "Known Satellites: " + 27 + "<br/>" + "Average orbital (Earth days to go round the sun): " + "6,81" + "<br/>" + "Average Temperature (degrees Celsius): " + "-195" + "<br/>";
-
-                        document.getElementById("planet_description").innerHTML = planetDescription
-                        document.getElementById("planet_charact").innerHTML = planetCharacteristics
-                        document.getElementById("offer_tit").innerHTML = offerTitle
-                        document.getElementById("offer_desc").innerHTML = offerDescription
-                    },
-                    error: (error) => { console.log(error) }
+                    // Mostrar el valor en el elemento <p>
+                    $('#planet_title').text('' + planetName);
                 });
+            })
 
 
-                // Mostrar el valor en el elemento <p>
-                $('#planet_title').text('' + planetName);
-            });
-        })
-    </script>
+
+
+        </script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <meta property="og:title" content="Internal Incredible Wolf" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+        html {
+            line-height: 1.15;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+        }
+
+        p,
+        li,
+        ul,
+        pre,
+        div,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        figure,
+        blockquote,
+        figcaption {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            background-color: transparent;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        button:-moz-focus,
+        [type="button"]:-moz-focus,
+        [type="reset"]:-moz-focus,
+        [type="submit"]:-moz-focus {
+            outline: 1px dotted ButtonText;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        input {
+            padding: 2px 4px;
+        }
+
+        img {
+            display: block;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+    </style>
+    <style data-tag="default-style-sheet">
+        html {
+            font-family: Inter;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        data-tag="font" />
 </head>
-<style>
-    td {
-        display: table-cell;
-        vertical-align: top;
-    }
-
-    body {
-        background-color: #ffc8c8;
-        /*background-image: url('./images/starfall-gif-46.gif'); /* Reemplaza 'tu-archivo.gif' con la ruta correcta de tu archivo GIF */
-        background-size: cover;
-        /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
-        background-repeat: no-repeat;
-        /* Evita que el fondo se repita */
-    }
-
-    #warning {
-        margin-top: 20px;
-    }
-
-    .navbar-brand {
-        font-size: 30px;
-    }
-
-    nav {
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
-    }
-
-    #container {
-        margin-top: 50px;
-    }
-
-    .contenedor {
-        width: 200px;
-        /* Establece el ancho máximo del contenedor */
-        /*border: 1px solid #ccc; /* Borde para el contenedor (opcional) */
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .texto {
-        white-space: pre-wrap;
-        /* Hace que el texto se divida en varias líneas */
-    }
-
-    .planet-card {
-        width: 100%;
-
-    }
-
-    .text-card {
-        top: -4%;
-        border-radius: 20px;
-    }
-</style>
 
 <body>
-    <div class="table-responsive">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <div style="width: 100px; height: 100px;">
-                            <div class="card_image" style="width: 100px; height: 100px;"> <img
-                                    src="./images/uranus_icon.png" style="background-size: cover;
-                                    background-repeat: no-repeat;
-                                    background-attachment: fixed;" />
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 item">
-                                    <div class="item-in text-card">
-                                        <h4 id="planet_title"> Characteristics</h4>
-                                        <div class="seperator"></div>
-                                        <p id="planet_description">Uranus, the solar system's cosmic oddball, is like that eccentric neighbor who throws the quirkiest backyard parties you've ever seen. It's a planet that marches to the beat of its own interstellar drum, and it's a real breath of fresh air—well, maybe more like a whiff of space gas!<br/>Picture a world that spins on its side, like it's trying to do the limbo in the cosmic dance-off. Yes, Uranus decided to tilt itself almost perpendicular to its orbit, giving it a spin cycle that's more topsy-turvy than a rollercoaster ride. It's like the planet's own way of saying, "I'm different, and I'm proud of it!"<br/>And speaking of pride, Uranus is famous for its beautiful bluish-green complexion, thanks to the icy methane in its atmosphere. It's like the universe's own fashion-forward statement, with colors that would make any other planet jealous.<br/>But don't think Uranus is all about looks – it's also got a mystery to solve. The planet's core temperature is hotter than you'd expect, like finding a cozy fireplace in the middle of a snowstorm. Scientists are scratching their heads trying to figure out why, making Uranus the ultimate cosmic enigma.<br/>Plus, Uranus has a funky ring system and a handful of quirky moons, each with its own personality. It's like a cosmic sitcom where the planets and moons are the cast, and every day is a new episode of interstellar drama.<br/>So, if you're ready for a journey to the outer reaches of our solar system and a visit to the wackiest neighbor in the cosmic cul-de-sac, Uranus is your ticket to an offbeat adventure like no other. Just remember to bring your sense of wonder and a penchant for the peculiar – you're in for a space odyssey that's out of this world!</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 item">
-                                    <div class="item-in text-card">
-                                        <h4>Characteristics</h4>
-                                        <div class="seperator"></div>
-                                        <p id="planet_charact"> Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit. Modi expedita eveniet consectetur, voluptates voluptatum, sit
-                                            excepturi earum. Veniam eius amet, accusantium, deserunt officia, quos qui
-                                            debitis laboriosam velit quis autem!</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="card 1">
-                            <div class="card_image"> <img src="./images/planetas/uranus2.png" />
-                            </div>
-                            <div class="card_title title-white">
-                                <p></p>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 item">
-                                    <div class="item-in text-card">
-                                        <h4 id="offer_tit">Some Kind of Title</h4>
-                                        <div class="seperator"></div>
-                                        <p id="offer_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Modi expedita eveniet consectetur, voluptates voluptatum, sit excepturi
-                                            earum. Veniam eius amet, accusantium, deserunt officia, quos qui debitis
-                                            laboriosam velit quis autem!</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="card 1">
-                            <div class="card_image"> <img src="./images/uranus_offer.png" />
-                            </div>
-                            <div class="card_title title-white">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+        <link href="./index.css" rel="stylesheet" />
 
+        <div class="home-container">
+            <div class="home-container01">
+                <div class="home-container02">
+                    <img src="./images/uranus_icon.png" style="width: 500px; height: 300px;" />
+                </div>
+                <div class="home-container03"></div>
+                <div class=" row home-container04"
+                    style="margin-left: 200px; padding: 20px; background-color: azure; border-radius: 20px;">
+                    <h4>Description</h4>
+
+                    <p id="planet_description"></br>Uranus, the solar system's cosmic oddball, is like
+                        that eccentric neighbor who throws the quirkiest backyard parties you've
+                        ever seen. It's a planet that marches to the beat of its own interstellar
+                        drum, and it's a real breath of fresh air—well, maybe more like a whiff of
+                        space gas!<br />Picture a world that spins on its side, like it's trying to
+                        do the limbo in the cosmic dance-off. Yes, Uranus decided to tilt itself
+                        almost perpendicular to its orbit, giving it a spin cycle that's more
+                        topsy-turvy than a rollercoaster ride. It's like the planet's own way of
+                        saying, "I'm different, and I'm proud of it!"<br />And speaking of pride,
+                        Uranus is famous for its beautiful bluish-green complexion, thanks to the
+                        icy methane in its atmosphere. It's like the universe's own fashion-forward
+                        statement, with colors that would make any other planet jealous.<br />But
+                        don't think Uranus is all about looks – it's also got a mystery to solve.
+                        The planet's core temperature is hotter than you'd expect, like finding a
+                        cozy fireplace in the middle of a snowstorm. Scientists are scratching their
+                        heads trying to figure out why, making Uranus the ultimate cosmic
+                        enigma.<br />Plus, Uranus has a funky ring system and a handful of quirky
+                        moons, each with its own personality. It's like a cosmic sitcom where the
+                        planets and moons are the cast, and every day is a new episode of
+                        interstellar drama.<br />So, if you're ready for a journey to the outer
+                        reaches of our solar system and a visit to the wackiest neighbor in the
+                        cosmic cul-de-sac, Uranus is your ticket to an offbeat adventure like no
+                        other. Just remember to bring your sense of wonder and a penchant for the
+                        peculiar – you're in for a space odyssey that's out of this world!</p>
+                </div>
+                <div class="home-container05"></div>
+            </div>
+            <div class="home-container06">
+                <div class="home-container07"></div>
+                <div class="row home-container08"
+                    style="margin-right: 200px; padding: 20px; background-color: azure; border-radius: 20px;">
+                    <h4>Characteristics</h4>
+                    <p id="planet_charact"> <br> </p>
+                </div>
+                <div class="home-container09"></div>
+                <div class="home-container10" style="margin-right: 200px;">
+                    <img src="./images/uranus_icon.png" style="width: 500px; height: 300px;" />
+                </div>
+            </div>
+            <div class="home-container11">
+                <div class="home-container12">
+                    <img src="./images/planetas/uranus1.png" style="width: 500px; height: 300px;" />
+                </div>
+                <div class="home-container13"></div>
+                <div class=" row home-container14"
+                    style="margin-left: 200px; padding: 20px; background-color: azure; border-radius: 20px;">
+                    <h4>Don't gift her a ring, gift her Saturn...</h4>
+                    <p><br>For those who are in love and whishing to spend the most romantic holidays in the entire
+                        Solar System, come and visit Saturn and enjoy it's magnificent rings.
+                    </p>
+                </div>
+                <div class="home-container15"></div>
+            </div>
+        </div>
+        
     </div>
 </body>
+
+</html>
+
+
+
+
+
+
