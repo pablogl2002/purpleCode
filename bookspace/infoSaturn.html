@@ -13,25 +13,63 @@
         crossorigin="anonymous"></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script>
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     // Obtener el valor del campo oculto
-        //     var planetName = document.getElementById('planet_name').value;
+        $(function() {
+        $(document).ready( async function() {
+            var planet = "earth";
 
-        //     // Obtener el elemento <p> donde deseas mostrar la información
-        //     var planetInfo = document.getElementById('planeta');
-        //     planetInfo.innerHTML(planetName);
+            var planetName;
+            var planetDescription;
+            var sunDistance;
+            var earthDistance;
+            var dayLength;
+            var yearLength;
+            var diam;
+            var masa;
+            var dens;
+            var knownSatellites;
+            var avgOrbital;
+            var avgTemp;
+            var offerTitle;
+            var offerDescription;
+            var planetCharacteristics;
+            
 
-        // });
+            $.ajax({
+                url: "http://127.0.0.1:8080/get_planet",
+                method: "POST",
+                contentType: "application/x-www-form-urlencoded", 
+                data: {"planet": "" + planet},
+                success: function(reply) {
 
-        $(document).ready(function () {
-            var planet = "saturn";
-            var planetName = "Saturn";
-
+                        planetName = "Saturn";
+                        planetDescription = reply.description;
+                        sunDistance = reply.sun_distance;
+                        earthDistance = reply.earth_distance;
+                        dayLength = reply.day_length;
+                        yearLength = reply.year_length;
+                        diam = reply.diameter;
+                        masa = reply.mass;
+                        dens = reply.density;
+                        knownSatellites = reply.known_satellites;
+                        avgOrbital = reply.avg_orbital;
+                        avgTemp = reply.avg_temperatures;
+                        offerTitle = reply.offer_title;
+                        offerDescription = reply.offrer_description;
+                        planetCharacteristics = "Distance to the SUN: " + sunDistance + "<br/>" + "Distance to Earth: " + earthDistance + "<br/>" + "Length of a day (in Earth days)" + dayLength + "<br/>" + "Length of one year (in Earth years): " + yearLength + "<br/>" + "Diameter (in millions of kilometers): " + diam + "<br/>" + "Mass (kg): " + masa + "<br/>" + "Density (g/cm³): " + dens + "<br/>" + "Known Satellites: " + knownSatellites + "<br/>" + "Average orbital (Earth days to go round the sun): " + avgOrbital + "<br/>" + "Average Temperature (degrees Celsius): " + avgTemp + "<br/>";
+            
+                        document.getElementById("planet_description").innerHTML = planetDescription
+                        document.getElementById("planet_charact").innerHTML = planetCharacteristics
+                        document.getElementById("offer_tit").innerHTML = offerTitle
+                        document.getElementById("offer_desc").innerHTML = offerDescription
+                },
+                error: (error) => { console.log(error) }
+                }); 
+            
 
             // Mostrar el valor en el elemento <p>
             $('#planet_title').text('' + planetName);
-        });
-
+        }); 
+    })
     </script>
 </head>
 <style>
@@ -97,12 +135,11 @@
             <tbody>
                 <tr>
                     <td>
-                        <div class="card 1">
-                            <div class="card_image"> <img
-                                    src="./images/pngtree-saturn-cartoon-mountain-desert-background-image_905419.png" />
-                            </div>
-                            <div class="card_title title-white">
-                                <p id="planeta">The planet</p>
+                        <div style="width: 100px; height: 100px;">
+                            <div class="card_image" style="width: 100px; height: 100px;"> <img
+                                    src="./images/saturn_icon.png" style="background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-attachment: fixed;"/>
                             </div>
                         </div>
                     </td>
@@ -145,7 +182,7 @@
                     <td>
                         <div class="card 1">
                             <div class="card_image"> <img
-                                    src="./images/planetas-dibujos-animados-sistema-solar-establecidos-fondo-espacio-cielo-oscuro_53562-2412.avif" />
+                                    src="./images/planetas/saturn2.png" />
                             </div>
                             <div class="card_title title-white">
                                 <p></p>
@@ -174,7 +211,7 @@
                     <td>
                         <div class="card 1">
                             <div class="card_image"> <img
-                                    src="./images/planetas-dibujos-animados-sistema-solar-establecidos-fondo-espacio-cielo-oscuro_53562-2412.avif" />
+                                    src="./images/saturn_offer.png" />
                             </div>
                             <div class="card_title title-white">
                             </div>
