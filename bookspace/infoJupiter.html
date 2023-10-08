@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Saturn - Info</title>
+    <title>Jupiter - Info</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/4.6/components/alerts/">
     <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/utilities/position/">
@@ -39,7 +39,7 @@
                 contentType: "application/x-www-form-urlencoded", 
                 data: {"planet": "" + planet},
                 success: function(reply) {
-                        console.log(reply)
+                        
                         planetName = "Jupiter";
                         planetDescription = reply.description;
                         sunDistance = reply.sun_distance;
@@ -53,7 +53,7 @@
                         avgOrbital = reply.avg_orbital;
                         avgTemp = reply.avg_temperatures;
                         offerTitle = reply.offer_title;
-                        offerDescription = reply.offrer_description;
+                        offerDescription = reply.offer_description;
                         planetCharacteristics = "Distance to the SUN: " + sunDistance + "<br/>" + "Distance to Earth: " + earthDistance + "<br/>" + "Length of a day (in Earth days)" + dayLength + "<br/>" + "Length of one year (in Earth years): " + yearLength + "<br/>" + "Diameter (in millions of kilometers): " + diam + "<br/>" + "Mass (kg): " + masa + "<br/>" + "Density (g/cm³): " + dens + "<br/>" + "Known Satellites: " + knownSatellites + "<br/>" + "Average orbital (Earth days to go round the sun): " + avgOrbital + "<br/>" + "Average Temperature (degrees Celsius): " + avgTemp + "<br/>";
             
                         document.getElementById("planet_charact").innerHTML = planetCharacteristics
